@@ -1,8 +1,11 @@
 /**
  * Import stylesheet partials
 */
+@import "bootstrap";
 @import "reset";
 @import "branding";
+
+@import url("https://use.typekit.net/xgv1xrp.css");
 
 /**
  * compassdiversity_mission_and_values starter styling
@@ -10,16 +13,13 @@
 body {
   color: var(--color-text);
   background-color: var(--color-background);
-  font-family: var(--font-family-sans-serif);
+  font-family: le-monde-livre-std, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
   color: var(--color-primary);
-}
-
-#main {
-  max-width: var(--container-width);
-  margin: calc(var(--unit) * 5) auto;
 }
 
 #navigation {
@@ -72,4 +72,59 @@ button {
 
 label {
   padding: calc(var(--unit) / 2) 0;
+}
+
+// styling for mission and values content starts here //
+
+#contentBlock {
+  align-items: center;
+  >div {
+    color: white;
+
+    &:first-of-type {
+      background-color: #DEB873;
+      padding: 4rem;
+    }
+
+    &:last-of-type {
+      background-color: #0A2438;
+      padding: 2rem 4rem;
+      height: 10%;
+      margin-left: -2rem;
+    }
+  }
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+#sectionBanner {
+  background-image: url("../images/sectoinBanner.jpg");
+  margin: 5rem auto;
+  padding: 8rem 0;
+  background-position: center;
+  background-size: cover;
+  .innerBanner {
+    opacity: 80%;
+    margin: auto 10rem;
+    padding: 4rem 6rem;
+    background-color:#0A2438;
+    color: white;
+  }
+}
+
+.card {
+  margin: auto;
+  .img-container {
+    background-color: #CCD9DF;
+    .card-img-top {
+      width: 75%;
+      margin: auto;
+      padding: 2rem;
+    }
+  }
+  .card-body {
+    background-color:#0A2438;
+    color: white;
+  }
 }
